@@ -1,24 +1,41 @@
-import logo from './logo.svg';
+import React, {useState, useEffect, createContext,useRef} from 'react';
 import './App.css';
 
+import AddExpenseComponent from './components/AddExpenseComponent';
+import ItemComponent from './components/ItemComponent';
+import SummaryComponent from './components/SummaryComponent';
+import BalanceComponent from './components/BalanceComponent';
+import HistoryComponent from './components/HistoryComponent';
+
+
+export const TransactionsContext = createContext();
+
 function App() {
+
+  const [transactions , setTransactions] = useState([]);
+  const income = useRef(0);
+  const expense = useRef(0);
+    
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <TransactionsContext.Provider value={{transactions, setTransactions, income, expense}}>
+    <div className="Expense">
+      <h2 id='title'>Expense Tracker</h2>
+      <BalanceComponent></BalanceComponent>
+      <SummaryComponent></SummaryComponent>
+      <h5 id='his'>History</h5>
+      <div id='hisDiv'>
+        <HistoryComponent />
+      {/* { 
+        transactions.map((data,index) => {
+          
+          return(<ItemComponent key={index} value={data}></ItemComponent>);
+        })
+      } */}
+      </div>
+      <h5 id='his'>Add New Transaction</h5>
+      <AddExpenseComponent></AddExpenseComponent>
     </div>
+    </TransactionsContext.Provider>
   );
 }
 

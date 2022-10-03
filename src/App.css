@@ -1,7 +1,93 @@
+p{
+  margin: 0%;
+}
+
 .App {
   text-align: center;
 }
 
+.Expense{
+  display: grid;
+  align-items:center;
+  background-color: #fbfaf9;
+  border: 2px solid rgb(44, 40, 40);
+  border-radius: 10px;
+  margin-left: 35%;
+  margin-right: 25%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding: 40px;
+  width: 20%;
+}
+
+.Balance{
+  display: inline;
+  margin: 10px;
+  
+}
+
+.Summary{
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  box-shadow: 1px 2px 5px #888888;
+  
+}
+.Item{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(244, 246, 248);
+  box-shadow: 1px 2px 5px #888888;
+  /* box-shadow:1px 2px #eb4056; */
+  
+}
+
+#Income{
+  color: rgb(104, 228, 187);
+}
+
+#Expense{
+  color: rgb(230, 74, 74);
+}
+
+#balhead{
+  font-weight: bold;
+  font-variant-caps: petite-caps
+
+}
+#bal{
+  
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.Addinput{
+  width: 100%;
+}
+#hisDiv{
+  height: 150px;
+  overflow: auto;
+}
+#addbutton{
+  background-color: rgb(148, 100, 237);
+  width: 100%;
+  color: aliceblue;
+  padding: 5px;
+  border-radius: 0px;
+  box-shadow: 1px 2px #888888;
+}
+
+#title{
+  font-family: Arial;
+  font-weight: 200;
+
+}
+#his{
+  
+  margin-bottom: auto;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
