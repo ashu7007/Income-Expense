@@ -7,8 +7,12 @@ function HistoryComponent(props) {
     const {transactions, setTransactions} = useContext(TransactionsContext);
 
     const onClickHandler = (e)=>{
+        console.log(e);
         alert("click OK to delete");
-        setTransactions([...transactions.splice(parseInt(e),1)]);
+        console.log(transactions);
+        transactions.splice(e,1);
+        setTransactions(transactions=>[...transactions]);
+        console.log(transactions);
     };
 
     return (

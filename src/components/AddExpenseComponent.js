@@ -15,8 +15,6 @@ function AddExpenseComponent(props) {
         let {Amount, Text} = item
         setTransactions([...transactions,{[Text]:Amount}])
         if (parseInt(Amount)>0){
-            console.log(parseInt(Amount)>0);
-            debugger;
             income.current =income.current + parseInt(Amount);
         }
         else{
