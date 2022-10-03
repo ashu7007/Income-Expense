@@ -1,8 +1,7 @@
-import React, {useState, useEffect, createContext,useRef} from 'react';
+import React, {useState, createContext,useRef} from 'react';
 import './App.css';
 
 import AddExpenseComponent from './components/AddExpenseComponent';
-import ItemComponent from './components/ItemComponent';
 import SummaryComponent from './components/SummaryComponent';
 import BalanceComponent from './components/BalanceComponent';
 import HistoryComponent from './components/HistoryComponent';
@@ -25,12 +24,6 @@ function App() {
       <h5 id='his'>History</h5>
       <div id='hisDiv'>
         <HistoryComponent />
-      {/* { 
-        transactions.map((data,index) => {
-          
-          return(<ItemComponent key={index} value={data}></ItemComponent>);
-        })
-      } */}
       </div>
       <h5 id='his'>Add New Transaction</h5>
       <AddExpenseComponent></AddExpenseComponent>
